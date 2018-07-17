@@ -15,7 +15,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
-<body onload="setInterval('prueb()',10000)">
+<body onload="setInterval('notif_msj()',10000)">
 
 <div class="container">
     <div class="row">
@@ -37,7 +37,7 @@
 
 
 <h3>&nbsp&nbsp <i class="glyphicon glyphicon-bell"> </i> <a href="{{ route('visualcon') }}"> Avisos </a>  </h3>
-<h3>&nbsp&nbsp  Sin leer <a href="{{ route('visualcon') }}" onclick="setInterval('prueb()',10000)"> <span class="badge">{{ count($notificacionesnleidas)  }}</span></a>  |  Leidos  <a href="{{ route('visualcon') }}"><span class="badge">{{ count($notifleid)  }}</span>       </a>  </h3>
+<h3>&nbsp&nbsp  Sin leer <a href="{{ route('visualcon') }}" onclick="setInterval('notif_msj()',10000)"> <span class="badge">{{ count($notificacionesnleidas)  }}</span></a>  |  Leidos  <a href="{{ route('visualcon') }}"><span class="badge">{{ count($notifleid)  }}</span>       </a>  </h3>
 <h3>&nbsp&nbsp <i class="glyphicon glyphicon-inbox"> </i> <a href="{{ route('baul') }}"> Archivados  </a>     <a href="{{ route('baul')}}"><span class="badge">{{ count($notifborradas)  }}</span></a>  </h3> 
 </div>
 
@@ -284,7 +284,7 @@ function CrearEnlace(url) {
 
 <script >
           
-    function prueb() {
+    function notif_msj() {
      
      if ({{ count($notificacionesnleidas)}}>=2) {
 
@@ -297,7 +297,7 @@ function CrearEnlace(url) {
     if ({{ count($notificacionesnleidas)}}==1) {
 
        toastr.options.progressBar = true;
-       toastr.info('Tienes {{ count($notificacionesnleidas)  }} notificacion nueva','{{ Auth::user()->name }}',{timeout: 5000});
+       toastr.info('Tienes {{ count($notificacionesnleidas)  }} notificación nueva','{{ Auth::user()->name }}',{timeout: 5000});
 
     }
 

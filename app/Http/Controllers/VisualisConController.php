@@ -173,7 +173,7 @@ public function imprimir_msj($id_modelo)
 
 //-------------------------------------------------------------------------------
    		
-   		$view =  view('invoice', compact('id_mensaje','notificaciones','notificacionesleidas','datos_pruebamod','modeloInt','modeloIntDet','import','mdtipos'))->render();
+   		$view =  view('invoice3', compact('id_mensaje','notificaciones','notificacionesleidas','datos_pruebamod','modeloInt','modeloIntDet','import','mdtipos'))->render();
 
         $pdf = App::make('dompdf.wrapper');
 

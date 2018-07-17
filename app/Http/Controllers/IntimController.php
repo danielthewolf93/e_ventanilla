@@ -133,10 +133,10 @@ public function mas(Request $req)
                    // $modeloIntDet= ModelDetalle::where('idmodelo','=',$id_tabla)->where("estado_mdetalle",'=','guardado')->get();
 
 
-           $contrib = rm_padron6::where('pad_cuit_index','=',$dato)->get();
+           //$contrib = rm_padron6::where('pad_cuit_index','=',$dato)->get();
 
            
-            // $contrib_nomen = rm_padron6::where('pad_cuit_index','=',$dato)->get();
+             $contrib_nomen = rm_padron6::where('pad_cuit_index','=',$dato)->get();
 
            //20069524959
            //

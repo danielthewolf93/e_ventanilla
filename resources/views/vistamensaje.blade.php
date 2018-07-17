@@ -105,7 +105,7 @@ style="width:600px; height:500px; margin:0px" class="panel panel-default" frameb
   
 @foreach($modeltip as $mtipo)
 
-    <p> {{ $mtipo->encabezado }}  </p>
+    <p> {!! $mtipo->encabezado !!}  </p>
    
 @endforeach
 
@@ -150,12 +150,12 @@ style="width:600px; height:500px; margin:0px" class="panel panel-default" frameb
     </tbody>
     </table>
       
-      <p> {{ $mtipo->cuerpo }} </p>
+      <p> {!! $mtipo->cuerpo !!} </p>
     
 
     <br>
 
-            <p>{{ $mtipo->pie_pagina }}</p>
+            <p>{!! $mtipo->pie_pagina !!}</p>
       
     <br>
 
