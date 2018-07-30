@@ -60,7 +60,7 @@ $(document).ready( function () {
   var oTable =    $('#example').DataTable({
         "processing": true,
         "serverSide": true,
-        "ajax": "{{ route('tabla_lmodel') }}",
+        "ajax": "{{ route('tabla_seguimiento') }}",
         "columns": [
                 {data: 'id', name: 'id'},
                 {data: 'cuit_contrib', name: 'cuit_contrib'},
