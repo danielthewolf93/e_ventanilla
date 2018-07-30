@@ -16,6 +16,8 @@ use Illuminate\Pagination\Paginator;
 
 use Datatables;
 
+use App\Modelos;
+
 use App\User;
 
 use App\movimientos_cont;
@@ -119,6 +121,33 @@ INNER JOIN notificaciones ON movimientos_conts.id_notificac=notificaciones.id_no
 
 
 	}
+
+
+			public function  tabla_lmodelos()
+	{
+		
+            $listamodel= Modelos::select(['id','cuit_contrib','tipo_modelo','created_at','estado'])->where('tipo_modelo','!=',0)->where('id_personal','=',auth()->id())->where('modelos.estado','=','guardado');
+     		return Datatables::of($listamodel)
+     		->make(true);
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	public function enviosms(Request $request)
 	{

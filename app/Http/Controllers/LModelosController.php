@@ -63,11 +63,9 @@ class LModelosController extends Controller
 
 
 
-      $modelos = Modelos::where('id_personal','=',auth()->id())->where('estado','=','guardado')->paginate(2);
+      
 
-      $listamodel= Modelos::where('id_personal','=',auth()->id())->where('estado','=','guardado')->get();
-
-      return view('LModelos_prueb',compact('modelos','listamodel','id_m'));
+      return view('LModelos_prueb');
 
 
 

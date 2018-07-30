@@ -322,3 +322,15 @@ Route::get('/enviosmswsp','SeguimientoNotifController@enviosms_wsp')->name('envi
 //ver esto solamente api oficial sino las otras quedan bloqueadas a los 20 msj a desconocidos
 //https://www.phpcentral.com/pregunta/541/whatsapp-api-para-php
 //<a target="_blank" href="https://api.whatsapp.com/send?phone=541100000000" class="dropdown-toggle" >WhastApp </a>
+
+
+
+//--Datatables para Lista de Modelos
+//-----------------------------------
+
+Route::get('/lista_modelos2','SeguimientoNotifController@tabla_lmodelos')->name('tabla_lmodel');
+
+
+
+
+//-----------------------------------
