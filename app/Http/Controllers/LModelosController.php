@@ -40,7 +40,7 @@ class LModelosController extends Controller
 			//sino el contribuyente no podra visualizarlos
 			//y generar el modelo correspondiente
 
-		$modelos = Modelos::where('id_personal','=',auth()->id())->where('estado','=','guardado')->paginate(2);
+		 $modelos = Modelos::where('id_personal','=',auth()->id())->where('estado','=','guardado')->paginate(2);
 
 
 //ver como traer id de la tabla modelos...
@@ -48,7 +48,7 @@ class LModelosController extends Controller
 
 		
 
-            $listamodel= Modelos::where('id_personal','=',auth()->id())->where('estado','=','guardado')->get();
+      $listamodel= Modelos::where('id_personal','=',auth()->id())->where('estado','=','guardado')->get();
 
 
            
@@ -57,6 +57,36 @@ class LModelosController extends Controller
 
 
 	}
+
+
+  public function index2(){
+
+
+
+      $modelos = Modelos::where('id_personal','=',auth()->id())->where('estado','=','guardado')->paginate(2);
+
+      $listamodel= Modelos::where('id_personal','=',auth()->id())->where('estado','=','guardado')->get();
+
+      return view('LModelos_prueb',compact('modelos','listamodel','id_m'));
+
+
+
+
+
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+
 
 
 
