@@ -88,12 +88,12 @@ INNER JOIN notificaciones ON movimientos_conts.id_notificac=notificaciones.id_no
 
 			$tasks = movimientos_cont::select(['id_mov_contr','cuit','mov_descripcion','created_at']);
  
-        	return Datatables::of($tasks)
+    	return Datatables::of($tasks)
  
             ->make(true);
 
 
-	// return view('notificaciones.seg_notif',compact('notificac_hist'));
+	//return view('notificaciones.seg_notif',compact('notificac_hist'));
 
 
 	}

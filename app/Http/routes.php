@@ -5,8 +5,6 @@
 | Application Routes
 |--------------------------------------------------------------------------
 |
-| Here is where you can register all of the routes for an application.
-|
 */
 
 //Para pruebas utilizar cuit '30715033204'.
@@ -141,7 +139,15 @@ Route::post('/intimsss','IntimController@agreg2')->name('intimsss');
 
 //Lista de Modelos
 
-Route::get('/lista_modelos','LModelosController@index')->name('lista_modelos');
+Route::get('/lista_modelos','LModelosController@index')->name('lista_modelos222222');
+
+
+//Prueba para implementar con DataTabls
+//--------------------------------------------------------------------------------
+//
+Route::get('/lista_modelos2','LModelosController@index2')->name('lista_modelos');
+//
+//--------------------------------------------------------------------------------
 
 //Enviar Modelos al Contribuyente
 Route::get('/lista_modelos{id_modelo}','LModelosController@enviarmodel')->name('envio_modelos');
@@ -294,10 +300,10 @@ Route::post('intimacion/pruebas','IntimController@p_agregar')->name('prueb_agreg
 
 
 
-Route::get('/seguimiento_notificaciones','SeguimientoNotifController@index')->name('seguimiento_notif');
+Route::get('/seguimiento_notificaciones','SeguimientoNotifController@index')->name('seguimiento_notif2');
 
 
-Route::get('/seg_notif','SeguimientoNotifController@prueba')->name('seguimiento_notif2');
+Route::get('/seguimiento_notificaciones2','SeguimientoNotifController@prueba')->name('seguimiento_notif');
 
 
 

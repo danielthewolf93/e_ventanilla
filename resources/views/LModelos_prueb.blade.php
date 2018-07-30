@@ -1,7 +1,6 @@
 @extends('layouts.app3')
 
-
-@section('content') 
+@section('content')	
 
 
 
@@ -22,8 +21,8 @@
 </head>
 <body>
 
+<h4>Lista de Modelos guardados</h4>
 
-</br></br>
 
 <table id="example" class="table table-striped table-bordered" style="width:100%">
     <thead>
@@ -32,8 +31,7 @@
             <th>Cuit</th>
             <th>Descripcion</th>
             <th>Fecha </th>
-            <th></th>
-            <th></th>
+           
 
         </tr>
 
@@ -75,21 +73,7 @@ $(document).ready( function () {
                 {data: 'id_mov_contr', name: 'id_mov_contr'},
                 {data: 'cuit', name: 'cuit'},
                 {data: 'mov_descripcion', name: 'mov_descripcion'},
-                {data: 'created_at', name: 'created_at'},
-                
-                { data: function () {
-                   var  ejm ='<a href="#">Ver</a>'
-                    if ( ejm != '4' ) {
-                        return ejm;
-                    }
-                } },
-                
-                { data: function () {
-                   var  ejm ='<a href="#">X</a>'
-                    if ( ejm != '4' ) {
-                        return ejm;
-                    }
-                } }
+                {data: 'created_at', name: 'created_at'}
 
 
 
@@ -107,10 +91,17 @@ $(document).ready( function () {
 </script>
 
 
+<a href="{{ route('prueb') }}" class="btn btn-primary">Volver</a>
 
 
 </body>
 
 </html>
+
+
+
+
+
+
 
 @endsection

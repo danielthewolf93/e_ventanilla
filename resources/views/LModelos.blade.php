@@ -12,14 +12,14 @@
 
 
 <h2>Lista de Modelos guardados</h2>
+</br>
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
 
 <br>
-	<h3>{{Auth::user()->name}}</h3>
-<br>
+
 	
 @if (Session::has('message'))
                    <div class="alert alert-info">{{ Session::get('message') }}</div>
