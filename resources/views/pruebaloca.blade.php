@@ -23,24 +23,23 @@
 <body>
 
 
-</br></br>
+</br>   </br>
+<div>
+        <table id="example" class="table table-striped table-bordered" style="width:100%">
+            <thead>
+                 <tr>
+                    <th>Id</th>
+                    <th>Cuit</th>
+                    <th>Descripcion</th>
+                    <th>Fecha Actividad</th>
+                   
 
-<table id="example" class="table table-striped table-bordered" style="width:100%">
-    <thead>
-         <tr>
-            <th>Id</th>
-            <th>Cuit</th>
-            <th>Descripcion</th>
-            <th>Fecha Actividad</th>
-           
+                </tr>
 
-        </tr>
-
-             
-
-    </thead>
-</table>
-
+                     
+            </thead>
+        </table>
+</div>
 
 
 
