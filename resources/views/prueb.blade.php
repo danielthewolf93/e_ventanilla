@@ -15,6 +15,7 @@
 								<div class="panel-body">
 											
 											@if(isset($id_tabla))
+
 											ID:{{ $id_tabla }}<br>
 											
 											<input type="hidden" name="id_m" value="{{ $id_tabla }}">
@@ -29,7 +30,7 @@
 
 
 											<div class="form-group">
-	 									    <label class="col-md-4 control-label" for="modeloform">Modelo de Intimación</label>
+	 									    	<label class="col-md-4 control-label" for="modeloform">Modelo de Intimación</label>
 											
 												<div class="col-md-6">
 				                                    <select class="form-control" name="modeloform" id="modeloform"  onclick="controlarmod()" >
@@ -46,14 +47,19 @@
 											
 										
 
-											@if(isset($cuitcon))
-											
-											<br>Cuit:{{ $cuitcon }}
-											
-											<input type="hidden" name="cuit_m_det"  id="cuit_m_det" value="{{ $cuitcon }}">
-
+										    @if(isset($cuitcon))
 											<div class="form-group">
-											<input type="text" name="cuit" value="{{ $cuitcon }}" id="cuit" placeholder="cuit_contribuyente" maxlength="11" onkeyup="autocompletar()">
+												<label class="col-md-4 control-label" for="cuit_m_det">Cuit:{{ $cuitcon }}</label>
+
+												<div class="col-md-6">
+													<input type="hidden" name="cuit_m_det"  id="cuit_m_det" value="{{ $cuitcon }}" >
+												
+
+											
+
+											
+											<input type="text" name="cuit" value="{{ $cuitcon }}" id="cuit" placeholder="cuit_contribuyente" maxlength="11" onkeyup="autocompletar()" class="form-control">
+											</div>
 											</div>
 
 
@@ -73,7 +79,7 @@
 										<div class="form-group">
 											<label class="col-md-4 control-label" for="cuit"></label>
 											<div class="col-md-6">								
-												<ul id="nombre_matricula" > </ul> 
+												<ul id="nombre_matricula"></ul> 
 											</div>
 
 										</div>
@@ -110,51 +116,75 @@
 
 									</div>
 									
-									
+									<div class="form-group">
+
 									<div id="importe" style="display: none;">
 										
-
-									<label>Importe</label>	<br>
-
-									$<input type="text" name="importe_tributo" id="importe_tributo"  maxlength="7" value=""><br><br>
-
+										
+									<label class="col-md-4 control-label" for="importe_tributo">Importe</label>
+									
+									<div class="col-md-6">
+										
+									<input type="text" name="importe_tributo" id="importe_tributo"  maxlength="7" value="" class="form-control" placeholder="$">
+									
+									</div>
 
 
 									</div>
+
+									</div>
+
+									<div class="form-group">
 									
 									<div id="sumario" style="display: none;">
 										
 
-									<label>Sumario N°</label>	<br>
-
-									<input type="text" name="sumario" id="sumario"  maxlength="7" value=""><br><br>
-
+										<label class="col-md-4 control-label" for="sumario">Sumario N°</label>	
+								
+										<div class="col-md-6">
+										<input type="text" name="sumario" id="sumario"  maxlength="7" value="" class="form-control">
+										</div>
 
 
 									</div>
 
-									<div id="expediente" style="display: none;">
-										
-
-									<label>Expediente N°</label>	<br>
-
-									<input type="text" name="expediente" id="expediente"  maxlength="7" value=""><br><br>
-
+									</div>
 									
-									</div>
+									<div class="form-group">
+
+										<div id="expediente" style="display: none;">
 										
-									<div id="resolucionnro" style="display: none;">
-										
 
-									<label>Resolución N°</label>	<br>
+											<label class="col-md-4 control-label" for="expediente">Expediente N°</label>	
 
-									<input type="text" name="resolucionnro" id="resolucionnro"  maxlength="7" value=""><br><br>
+											<div class="col-md-6">
 
-									
+												<input type="text" name="expediente" id="expediente"  maxlength="7" value="" class="form-control">
+
+											</div>
+
+										</div>
 									</div>
-
 
 									<div class="form-group">
+										
+										<div id="resolucionnro" style="display: none;">
+										
+
+											<label class="col-md-4 control-label" for="resolucionnro">Resolución N°</label>
+											<div class="col-md-6">
+												<input type="text" name="resolucionnro" id="resolucionnro"  maxlength="7" value="" class="form-control">
+											</div>
+									
+										</div>
+
+									</div>
+
+									
+									<div class="form-group">
+
+
+										 <div class="col-md-6 col-md-offset-4">
 
 									<input type="submit" name="envio" class="btn btn-primary " onclick="masuno()" value="Agregar Tributo" >
 
@@ -163,6 +193,8 @@
 
 
 									<th> <a href="{{ route('visualizar_modelo',[$id_tabla]) }}" class="btn btn-primary" target="_blank">Ver</a> </th>
+
+									<th><a href="{{ route('lista_modelos') }}" class="btn btn-primary">Cerrar Intim.</a></th>
 
 									@endif
 
@@ -173,9 +205,12 @@
 
 									<input type="hidden" name="importe_tributoss" value="">
 
-									</div>
+										</div>
+									
+									  </div>
 
-
+									
+									
 						
 
 								</div>

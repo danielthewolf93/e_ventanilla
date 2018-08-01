@@ -27,7 +27,20 @@
  
 
 @if ( count($listamodel)==0 )  
-<p>&nbsp &nbsp No tiene Modelos creados </p>
+
+<div class="form-group">
+
+<p><div class="alert alert-warning" style="text-align:center;">¡No tiene Intimaciones guardadas!</div></p>
+
+</div>
+
+<div class="form-group">
+	
+
+<a href="{{ route('prueb') }}" class="btn btn-primary col-md-offset-5">Crear Intimación</a>
+
+</div>
+
 
 @else
 
