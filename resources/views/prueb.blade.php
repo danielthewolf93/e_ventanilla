@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Prueba</div>
+                <div class="panel-heading">Intimación</div>
 
 				 <form method="post" action="{{ route('prueb_agreg')}}" >
                     {{ csrf_field() }}
@@ -70,7 +70,17 @@
 
 											@endif
 
-									<ul id="nombre_matricula"> </ul> 
+										<div class="form-group">
+											<label class="col-md-4 control-label" for="cuit"></label>
+											<div class="col-md-6">								
+												<ul id="nombre_matricula" > </ul> 
+											</div>
+
+										</div>
+
+								
+
+
 									<div class="form-group">
 										<label class="col-md-4 control-label" for="matricula">Matricula/Inscripc</label>
 										<div class="col-md-6">
