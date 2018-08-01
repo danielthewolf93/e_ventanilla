@@ -29,12 +29,16 @@
 
 
 											<div class="form-group">
-	 									    <label class="form-group">Modelo de Intimacion</label>
-		                                    <select class="form-control" name="modeloform" id="modeloform"  onclick="controlarmod()" >
-		                                    <option value="1">Modelo 1</option>
-		                                    <option value="2">Modelo 2</option>    
-		                                    <option value="3">Modelo 3</option>   
-		                                    </select>
+	 									    <label class="col-md-4 control-label" for="modeloform">Modelo de Intimación</label>
+											
+												<div class="col-md-6">
+				                                    <select class="form-control" name="modeloform" id="modeloform"  onclick="controlarmod()" >
+				                                    <option value=" " disabled selected >Seleccione...</option>
+				                                    <option value="1">Modelo 1</option>
+				                                    <option value="2">Modelo 2</option>    
+				                                    <option value="3">Modelo 3</option>   
+				                                    </select>
+												</div>
 	                                		</div>
 
 
@@ -55,39 +59,47 @@
 
 											
 											@else
-											<label class="form-group">Cuit</label>
 											<div class="form-group">
-											<input type="text" name="cuit" id="cuit" placeholder="cuit_contribuyente" maxlength="11" onkeyup="autocompletar()">
+
+												<label class="col-md-4 control-label" for="cuit">Cuit</label>
+												<div class="col-md-6">
+														<input type="text" name="cuit" id="cuit" placeholder="cuit_contribuyente" maxlength="11" onkeyup="autocompletar()" class="form-control">
+												</div>
 											</div>
 
 
 											@endif
 
 									<ul id="nombre_matricula"> </ul> 
-
-									<label class="form-group">Matricula/Inscripc</label>
 									<div class="form-group">
-										<select name="matricula" id="matricula" required>
-										</select>
+										<label class="col-md-4 control-label" for="matricula">Matricula/Inscripc</label>
+										<div class="col-md-6">
+											<select name="matricula" id="matricula" required class="form-control">
+											</select>
+										</div>
 									</div>
 									
-											<label class="form-group">Tributo</label>
 									<div class="form-group">
-										<select name="tributo" id="tributo" >
-											
-											<option value="0011">HABILITACION TASA DE SEGURIDAD E HIGIENE</option>
-											<option value="0012">TASA DE SEGURIDAD E HIGIENE</option>
-											<option value="0010">MULTA</option>
-										</select>
+											<label class="col-md-4 control-label" for="tributo">Tributo</label>
+										<div class="col-md-6">
+											<select name="tributo" id="tributo" class="form-control">
+												<option value=" " disabled selected >Seleccione...</option>
+												<option value="0011">HABILITACION TASA DE SEGURIDAD E HIGIENE</option>
+												<option value="0012">TASA DE SEGURIDAD E HIGIENE</option>
+												<option value="0010">MULTA</option>
+											</select>
+										</div>
+									</div>
+									
+									<div class="form-group">
+
+										<label class="col-md-4 control-label" for="fecha_hoy">Fecha Periodo</label>
+		                                	 <div class="col-md-6">
+		                                	 	<input type="date" name="fecha_hoy" class="form-control">
+											</div>
 
 									</div>
-
-
-									<label class="form-group">Fecha Periodo</label>
-                                	 <div class="form-group">
-                                	 	<input type="date" name="fecha_hoy" >
-									</div>	
-
+									
 									
 									<div id="importe" style="display: none;">
 										

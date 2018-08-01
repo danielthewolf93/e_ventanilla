@@ -31,9 +31,8 @@
             <th>Id</th>
             <th>Cuit</th>
             <th>Descripcion</th>
-            <th>Fecha </th>
-            <th></th>
-            <th></th>
+            <th>Fecha Actividad</th>
+           
 
         </tr>
 
@@ -52,15 +51,7 @@
 <script type="text/javascript" charset="utf8" src="js/qrcode.min.js"></script>
 
 
-        <script >
-        	
-        	function prueb() {
-        		toastr.options.progressBar = true;
-
-        		toastr.info('Nueva Novedad','{{ Auth::user()->name }}',{timeout: 5000})
-
-        	}
-       </script>
+       
 
 
 <script>
@@ -75,9 +66,9 @@ $(document).ready( function () {
                 {data: 'id_mov_contr', name: 'id_mov_contr'},
                 {data: 'cuit', name: 'cuit'},
                 {data: 'mov_descripcion', name: 'mov_descripcion'},
-                {data: 'created_at', name: 'created_at'},
-                
-                { data: function () {
+                {data: 'created_at', name: 'created_at'}
+
+            /*    { data: function () {
                    var  ejm ='<a href="#">Ver</a>'
                     if ( ejm != '4' ) {
                         return ejm;
@@ -90,6 +81,9 @@ $(document).ready( function () {
                         return ejm;
                     }
                 } }
+*/
+
+
 
 
 

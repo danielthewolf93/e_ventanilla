@@ -139,13 +139,13 @@ Route::post('/intimsss','IntimController@agreg2')->name('intimsss');
 
 //Lista de Modelos
 
-Route::get('/lista_modelos','LModelosController@index')->name('lista_modelos222222');
+Route::get('/lista_modelos','LModelosController@index')->name('lista_modelos');
 
 
 //Prueba para implementar con DataTabls
 //--------------------------------------------------------------------------------
 //
-Route::get('/lista_modelos2','LModelosController@index2')->name('lista_modelos');
+Route::get('/lista_modelos2','LModelosController@index2')->name('lista_modelos2');
 //
 //--------------------------------------------------------------------------------
 
@@ -308,7 +308,7 @@ Route::get('/seguimiento_notificaciones2','SeguimientoNotifController@prueba')->
 
 
 
-Route::get('/pruebatabla','SeguimientoNotifController@tabla')->name('tabla_seguimiento');
+Route::get('/pruebatabla','SeguimientoNotifController@tabla_lmodelos')->name('tabla_seguimiento');
 
 
 Route::get('/seguimiento_notif','SeguimientoNotifController@tabla_notif')->name('tabla_notif');
@@ -328,7 +328,7 @@ Route::get('/enviosmswsp','SeguimientoNotifController@enviosms_wsp')->name('envi
 //--Datatables para Lista de Modelos
 //-----------------------------------
 
-Route::get('/lista_modelos2','SeguimientoNotifController@tabla_lmodelos')->name('tabla_lmodel');
+Route::get('/lista_modelos/2333/1221','SeguimientoNotifController@tabla_lmodelos')->name('tabla_lmodel');
 
 
 

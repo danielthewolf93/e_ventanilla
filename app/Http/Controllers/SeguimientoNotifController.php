@@ -72,7 +72,6 @@ INNER JOIN notificaciones ON movimientos_conts.id_notificac=notificaciones.id_no
 	public function prueba()
 	{
 		
-		Session::flash('warning','Mensaje Nuevo');
 
 		return view('pruebaloca');
 
@@ -90,7 +89,7 @@ INNER JOIN notificaciones ON movimientos_conts.id_notificac=notificaciones.id_no
 
 			$tasks = movimientos_cont::select(['id_mov_contr','cuit','mov_descripcion','created_at']);
  
-    	return Datatables::of($tasks)
+    		return Datatables::of($tasks)
  
             ->make(true);
 
@@ -107,8 +106,7 @@ INNER JOIN notificaciones ON movimientos_conts.id_notificac=notificaciones.id_no
 		    $notificac_hist = DB::table('movimientos_conts')
             ->join('notificaciones', 'movimientos_conts.id_notificac', '=', 'notificaciones.id_notific')
             ->select('movimientos_conts.*', 'notificaciones.tema_notif', 'notificaciones.notif_despac','notificaciones.id_personal','notificaciones.created_at','notificaciones.notif_estado','notificaciones.id_recep')
-            ->where('notificaciones.id_personal','=',auth()->id())
-            ->get();
+            ->where('notificaciones.id_personal','=',auth()->id())->get();
 
 			$tasks = movimientos_cont::select(['id_mov_contr','cuit','mov_descripcion','created_at']);
  

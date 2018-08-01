@@ -94,7 +94,7 @@
             <div class="panel panel-default">
 
 <br>
-	<h3>{{$nombre}}</h3>
+	<h3>&nbsp&nbsp{{$nombre}}</h3>
 <br>
 	
 

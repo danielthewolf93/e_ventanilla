@@ -53,6 +53,12 @@
        
 
 
+
+
+
+
+	
+	
 <script>
     
 $(document).ready( function () {
@@ -67,6 +73,8 @@ $(document).ready( function () {
                 {data: 'tipo_modelo', name: 'tipo_modelo'},
                 {data: 'created_at', name: 'created_at'},
                 {data: 'estado', name: 'estado'}
+                
+               
 
 
 
