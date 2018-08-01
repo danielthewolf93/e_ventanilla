@@ -24,22 +24,28 @@
 
 
 </br>   </br>
-<div>
-        <table id="example" class="table table-striped table-bordered" style="width:100%">
-            <thead>
-                 <tr>
-                    <th>Id</th>
-                    <th>Cuit</th>
-                    <th>Descripcion</th>
-                    <th>Fecha Actividad</th>
-                   
+<div class="col-md-10 col-md-offset-1">
+    <div class="panel panel-default">
+        <div class="panel-heading">Historial de Notificaciones</div>
+            <div class="panel-body">
+                <table id="example" class="table table-striped table-bordered" style="width:100%">
+                    <thead>
+                         <tr>
+                            <th>Id</th>
+                            <th>Cuit</th>
+                            <th>Descripcion</th>
+                            <th>Fecha Actividad</th>
+                           
 
-                </tr>
+                        </tr>
 
-                     
-            </thead>
-        </table>
+                             
+                    </thead>
+                </table>
+            </div>
+      </div>
 </div>
+
 
 
 
