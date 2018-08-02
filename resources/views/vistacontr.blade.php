@@ -41,12 +41,14 @@
 <h3>&nbsp&nbsp <i class="glyphicon glyphicon-inbox"> </i> <a href="{{ route('baul') }}"> Archivados  </a>     <a href="{{ route('baul')}}"><span class="badge">{{ count($notifborradas)  }}</span></a>  </h3> 
 </div>
 
+<hr>
 
-
-<h3>Novedades</h3>
+<h3>Novedades al {{date('d-m-Y')}}</h3>
 
 @if(count($novedades)==0)
-<p>*No hay nuevas novedades.</p>
+  <ul class="list alert alert-warning">
+  <p><strong>* No hay nuevas novedades.</strong></p>
+  </ul>
 @else
 
 <ul class="list alert alert-info">
@@ -60,7 +62,7 @@
   
 
      
-    *<strong>{{ $nov->texto }}<br></strong>   
+    *  <strong>{{ $nov->texto }}<br></strong>   
      
     
         

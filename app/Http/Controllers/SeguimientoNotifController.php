@@ -20,6 +20,8 @@ use App\Modelos;
 
 use App\User;
 
+use App\novedades;
+
 use App\movimientos_cont;
 
 use App\Http\Requests;
@@ -127,6 +129,37 @@ INNER JOIN notificaciones ON movimientos_conts.id_notificac=notificaciones.id_no
             $listamodel= Modelos::select(['id','cuit_contrib','tipo_modelo','created_at','estado'])->where('tipo_modelo','!=',0)->where('id_personal','=',auth()->id())->where('modelos.estado','=','guardado');
      		return Datatables::of($listamodel)
      		->make(true);
+
+	}
+
+
+
+	public function tabla_lnovedades()
+	
+	{
+				
+
+				return view('novedades.listanoveds');
+
+
+	
+
+	}
+
+			public function  tabla_novedades()
+	{
+		
+		    
+
+			$tasks = novedades::select(['id_novedades','fecha_desde','fecha_hasta','texto','tipo_tema_novedad']);
+ 
+        	return Datatables::of($tasks)
+ 
+            ->make(true);
+
+
+	// return view('notificaciones.seg_notif',compact('notificac_hist'));
+
 
 	}
 

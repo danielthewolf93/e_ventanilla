@@ -32,15 +32,11 @@
 <h5>  Para: {{ Auth::user()->name }}    ( CUIT   {{ Auth::user()->id }} )</h5>				
 </div>
 
-<div class="col-xs-4">
+<div class="col-xs-4" style="color: grey;">
 ID MENSAJE:{{ $id_mensaje }}
 </div>
 
 </div>
-
-
-
-
 @foreach ($notificaciones as $notif)
       
     <h2 style="text-align:center;">{{$notif->tema_notif}}</h2>
@@ -91,9 +87,9 @@ style="width:600px; height:500px; margin:0px" class="panel panel-default" frameb
 
 {{-- Aqui va el modelo segun el texto fijo desde la base de datos o sino muestro el texto segun el tipo de modelo indicado --}}
 
-
-
-<h1 style="text-align:center;">Modelo {{ $mode->tipo_modelo }}</h1>
+{{--<h1 style="text-align:center;">Modelo {{ $mode->tipo_modelo }}</h1>--}}
+<hr>
+<h3 style="text-align:center;">Visualización Previa</h3>
     <label for="">Fecha :</label>
        {{ $mode->dia_referenc }}
       <br>

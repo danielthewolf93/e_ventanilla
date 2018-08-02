@@ -334,3 +334,10 @@ Route::get('/lista_modelos/2333/1221','SeguimientoNotifController@tabla_lmodelos
 
 
 //-----------------------------------
+//-
+//-Datatables para lista de Novedades
+//-----------------------------------
+
+Route::get('/home/lista_novedades','SeguimientoNotifController@tabla_lnovedades')->name('tabla_listnoved');
+
+Route::get('/home/lista_novedades/tabla','SeguimientoNotifController@tabla_novedades')->name('tabla_novedades');

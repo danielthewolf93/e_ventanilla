@@ -203,8 +203,12 @@
                                 <div class="form-group">
                                     <div class="col-md-6 col-md-offset-4">
                                         <button  type="submit" class="btn btn-primary"  >
-                                            <i class="fa fa-btn fa-sign-in"></i> Enviar
+                                            <i class="fa fa-btn fa-sign-in"></i> Enviar 
                                         </button>
+
+                                        <a href="{{ route('tabla_listnoved') }}" class="btn btn-success" target="_blank">Lista de Novedades</a>
+  
+
                                     </div>
                                 </div>
 								
