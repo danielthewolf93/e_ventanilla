@@ -194,12 +194,13 @@
 
 									<th> <a href="{{ route('visualizar_modelo',[$id_tabla]) }}" class="btn btn-primary" target="_blank">Ver</a> </th>
 
-									<th><a href="{{ route('lista_modelos') }}" class="btn btn-primary">Cerrar Intim.</a></th>
+									<th><a href="{{ route('lista_modelos') }}" class="btn btn-danger">Cerrar Intim.</a></th>
 
 									@endif
 
-								
-									<a href="{{ route('lista_modelos') }}" class="btn btn-success" target="_blank">Listar Modelos Creados</a>
+									
+									<a href="{{ route('lista_modelos') }}" class="btn btn-success" target="_blank" >Listar Modelos Creados</a>
+									
 	
 									<input type="hidden" name="fecha_creac" value="{{  date('Y-m-d') }}">
 
