@@ -6465,11 +6465,11 @@
 	 */
 	function _fnLog( settings, level, msg, tn )
 	{
-		msg = 'DataTables warning: '+
+		msg = 'DataTables advertencia: '+
 			(settings ? 'table id='+settings.sTableId+' - ' : '')+msg;
 	
 		if ( tn ) {
-			msg += '. For more information about this error, please see '+
+			msg += '. Para más información acerca de este error, por favor dirijirse a: '+
 			'http://datatables.net/tn/'+tn;
 		}
 	

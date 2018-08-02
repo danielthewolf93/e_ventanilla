@@ -17,68 +17,73 @@
 
 <body onload="setInterval('notif_msj()',10000)">
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default ">
-<div class="panel-body">
-
-<br>
-      <div class="col-sm-6">
-        
-
-<h1><i sp class="fa fa-address-card" ></i>Juan Perez</h1> 
-
-<h3>Cuit 20-37462532-3</h3>
-</div>
-
-<div class="media-body">
-  
-
-
-<h3>&nbsp&nbsp <i class="glyphicon glyphicon-bell"> </i> <a href="{{ route('visualcon') }}"> Avisos </a>  </h3>
-<h3>&nbsp&nbsp  Sin leer <a href="{{ route('visualcon') }}" onclick="setInterval('notif_msj()',10000)"> <span class="badge">{{ count($notificacionesnleidas)  }}</span></a>  |  Leidos  <a href="{{ route('visualcon') }}"><span class="badge">{{ count($notifleid)  }}</span>       </a>  </h3>
-<h3>&nbsp&nbsp <i class="glyphicon glyphicon-inbox"> </i> <a href="{{ route('baul') }}"> Archivados  </a>     <a href="{{ route('baul')}}"><span class="badge">{{ count($notifborradas)  }}</span></a>  </h3> 
-</div>
-
-
-
-<h3>Novedades</h3>
-
-@if(count($novedades)==0)
-<p>*No hay nuevas novedades.</p>
-@else
-
-<ul class="list alert alert-info">
-  
 
 
 
 
 
-      @foreach($novedades as $nov)
-  
+<div class="container" style="width:100%">
+      <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+              <div class="panel panel-default ">
+  <div class="panel-body">
 
-     
-    *<strong>{{ $nov->texto }}<br></strong>   
-     
+  <br>
+        <div class="col-sm-6">
+          
+
+  <h1><i sp class="fa fa-address-card" ></i>Juan Perez</h1> 
+
+  <h3>Cuit 20-37462532-3</h3>
+  </div>
+
+  <div class="media-body">
     
-        
-     @endforeach
-
-</ul>
 
 
-@endif
+  <h3>&nbsp&nbsp <i class="glyphicon glyphicon-bell"> </i> <a href="{{ route('visualcon') }}"> Avisos </a>  </h3>
+  <h3>&nbsp&nbsp  Sin leer <a href="{{ route('visualcon') }}" onclick="setInterval('notif_msj()',10000)"> <span class="badge">{{ count($notificacionesnleidas)  }}</span></a>  |  Leidos  <a href="{{ route('visualcon') }}"><span class="badge">{{ count($notifleid)  }}</span>       </a>  </h3>
+  <h3>&nbsp&nbsp <i class="glyphicon glyphicon-inbox"> </i> <a href="{{ route('baul') }}"> Archivados  </a>     <a href="{{ route('baul')}}"><span class="badge">{{ count($notifborradas)  }}</span></a>  </h3> 
+  </div>
 
-</div>
+<hr>
+
+  <h3>Novedades</h3>
+
+  @if(count($novedades)==0)
+  <p>*No hay nuevas novedades.</p>
+  @else
+
+  <ul class="list alert alert-info">
+    
 
 
 
 
-			</div>
 
-		</div>
+        @foreach($novedades as $nov)
+    
+
+       
+      *<strong>{{ $nov->texto }}<br></strong>   
+       
+      
+          
+       @endforeach
+
+  </ul>
+
+
+  @endif
+
+  </div>
+
+
+
+
+  			</div>
+
+  		</div>
 
 	</div>
 
@@ -88,7 +93,7 @@
 
 
 
-<div class="container">
+<div class="container" style="width:100%">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
@@ -261,6 +266,7 @@ return  '';
 
 
 
+
 <script  type="text/javascript">
 
 // RESALTAR LAS FILAS AL PASAR EL MOUSE
@@ -314,7 +320,64 @@ function CrearEnlace(url) {
 
 
 
+@extends('layouts.encabezado')
 
+<footer>
+
+
+  <div class="container" style="width:100%">
+          <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default ">
+
+              <div class="panel-body">
+
+
+           
+             
+
+                    <div class="row">
+
+                          <div class="col-md-6 text-right">
+
+                            <p style="text-align: left;" class="text-muted small m-t-1">
+                                
+                                <img src="../resources/img/logo.png" width="20px">
+
+                            </p>
+
+                          </div>
+                    </div>
+
+
+                     <div class="row">
+                              <div class="col-md-12 text-right">
+
+                          <p style="text-align: center;" class="text-muted small m-t-1">
+
+                                  
+                                  
+                                  
+                                  <strong >Dirección General de Rentas</strong><br>
+                                  Sitio perteneciente a: 
+                                  Secretaría de Hacienda y Desarrollo Económico<br>
+                                  Municipalidad de San Fernando del Valle de Catamarca
+
+                          </p>
+
+                              </div>
+
+
+                       </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+</div>
+
+
+</footer>
 </body>
 
 @endif
@@ -337,3 +400,5 @@ function CrearEnlace(url) {
 
 
 @endsection
+
+
