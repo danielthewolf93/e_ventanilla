@@ -19,7 +19,7 @@ Route::auth();
 
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/inicio', 'HomeController@index')->name('home');
 Route::post('/messages', 'HomeController@store')->name('messages.store');
 
 Route::post('/messages2','HomeController@storenov')->name('novedades.store');
@@ -338,6 +338,6 @@ Route::get('/lista_modelos/2333/1221','SeguimientoNotifController@tabla_lmodelos
 //-Datatables para lista de Novedades
 //-----------------------------------
 
-Route::get('/home/lista_novedades','SeguimientoNotifController@tabla_lnovedades')->name('tabla_listnoved');
+Route::get('/inicio/lista_novedades','SeguimientoNotifController@tabla_lnovedades')->name('tabla_listnoved');
 
-Route::get('/home/lista_novedades/tabla','SeguimientoNotifController@tabla_novedades')->name('tabla_novedades');
+Route::get('/inicio/lista_novedades/tabla','SeguimientoNotifController@tabla_novedades')->name('tabla_novedades');

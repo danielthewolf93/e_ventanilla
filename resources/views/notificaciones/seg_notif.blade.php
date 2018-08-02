@@ -23,7 +23,7 @@
     				<div class="row">
        					<div class="col-md-8 col-md-offset-2">
             				<div class="alert alert-success">
-				<h3 style="text-align:center;">No tiene enviada ninguna notificacion</h3>
+				<h3 style="text-align:center;">No tiene enviada ninguna notificación.</h3>
 
 							</div>
 						</div>
@@ -81,13 +81,16 @@
 
 			</table>
 
-			{{$notificac_hist->links()}}
+			
+{{$notificac_hist->links()}}	
 
 			</div>
-
 		</div>
-					
+				
 	</div>
+	
+	
+	
 
 </div>
 

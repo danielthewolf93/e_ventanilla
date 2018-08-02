@@ -40,20 +40,30 @@ class LModelosController extends Controller
 			//sino el contribuyente no podra visualizarlos
 			//y generar el modelo correspondiente
 
-		 $modelos = Modelos::where('id_personal','=',auth()->id())->where('estado','=','guardado')->paginate(2);
+		 //$modelos = Modelos::where('id_personal','=',auth()->id())->where('estado','=','guardado')->paginate(5);
 
 
 //ver como traer id de la tabla modelos...
 //se repite el campo en la tabla modelos_detalles seria algo : modelos.id as idmodelo 
+//
+
+
+     $listamodel = DB::table('modelos')
+            ->select('modelos.*')
+            ->where('id_personal','=',auth()->id())->where('estado','=','guardado')
+            ->paginate(7);
+
 
 		
 
-      $listamodel= Modelos::where('id_personal','=',auth()->id())->where('estado','=','guardado')->get();
+      //$listamodel= Modelos::where('id_personal','=',auth()->id())->where('estado','=','guardado')->get();
 
 
            
 
-			return view('LModelos',compact('modelos','listamodel','id_m'));
+			//return view('LModelos',compact('modelos','listamodel'));
+      //
+      return view('LModelos',compact('listamodel'));
 
 
 	}
@@ -117,14 +127,17 @@ class LModelosController extends Controller
 
        
 */
-            $listamodel= Modelos::where('id_personal','=',auth()->id())->where('estado','=','guardado')->get();
+           // $listamodel= Modelos::where('id_personal','=',auth()->id())->where('estado','=','guardado')->get();
 
             $modelos= Modelos::where('id_personal','=',auth()->id())->where('estado','=','guardado')->get();
 
 
-           
+            $listamodel = DB::table('modelos')
+            ->select('modelos.*')
+            ->where('id_personal','=',auth()->id())->where('estado','=','guardado')
+            ->paginate(7);
 
-			return view('LModelos',compact('modelos','listamodel','id_m'));
+			     return view('LModelos',compact('listamodel'));
 
   
 
@@ -275,9 +288,12 @@ class LModelosController extends Controller
             //se repite el campo en la tabla modelos_detalles seria algo : modelos.id as idmodelo 
 
 
-            $listamodel= Modelos::where('id_personal','=',auth()->id())->where('estado','=','guardado')->get();
+            //$listamodel= Modelos::where('id_personal','=',auth()->id())->where('estado','=','guardado')->get();
 
-            
+             $listamodel = DB::table('modelos')
+            ->select('modelos.*')
+            ->where('id_personal','=',auth()->id())->where('estado','=','guardado')
+            ->paginate(7);
             
             return redirect()->route('lista_modelos')->with('message','Tu modelo fue enviado');
 

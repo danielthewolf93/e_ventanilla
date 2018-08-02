@@ -43,7 +43,7 @@
 
 <hr>
 
-<h3>Novedades al {{date('d-m-Y')}}</h3>
+<h3 style="text-align:center;">Novedades al {{date('d-m-Y')}}</h3>
 
 @if(count($novedades)==0)
   <ul class="list alert alert-warning">
@@ -51,7 +51,7 @@
   </ul>
 @else
 
-<ul class="list alert alert-info">
+<ul class="list alert alert-info" >
   
 
 

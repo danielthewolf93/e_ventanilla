@@ -62,7 +62,7 @@ INNER JOIN notificaciones ON movimientos_conts.id_notificac=notificaciones.id_no
             ->join('notificaciones', 'movimientos_conts.id_notificac', '=', 'notificaciones.id_notific')
             ->select('movimientos_conts.*', 'notificaciones.tema_notif', 'notificaciones.notif_despac','notificaciones.id_personal','notificaciones.created_at','notificaciones.notif_estado','notificaciones.id_recep')
             ->where('notificaciones.id_personal','=',auth()->id())
-            ->paginate(7);
+            ->paginate(8);
 
 
 

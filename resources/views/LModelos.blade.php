@@ -96,7 +96,7 @@
 		</tbody>
   	</table>
 
-	{{$model->paginate()}}
+	{{$listamodel->links()}}
 
 
 
