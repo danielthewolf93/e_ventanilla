@@ -7,9 +7,9 @@
 <ul><a href="{{ route('visualcon') }}">Rentas-Notificaciones</a> / Inicio</ul>
 
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
@@ -17,112 +17,70 @@
 
 <body onload="setInterval('notif_msj()',10000)">
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<div class="container" style="width:100%">
-=======
 <div class="container">
->>>>>>> parent of 913d243... cambiosss_agregand
-=======
-<div class="container">
->>>>>>> parent of 913d243... cambiosss_agregand
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default ">
 <div class="panel-body">
-=======
->>>>>>> origin/master
+
+<br>
+      <div class="col-sm-6">
+        
+
+<h1><i sp class="fa fa-address-card" ></i>Juan Perez</h1> 
+
+<h3>Cuit 20-37462532-3</h3>
+</div>
+
+<div class="media-body">
+  
+
+
+<h3>&nbsp&nbsp <i class="glyphicon glyphicon-bell"> </i> <a href="{{ route('visualcon') }}"> Avisos </a>  </h3>
+<h3>&nbsp&nbsp  Sin leer <a href="{{ route('visualcon') }}" onclick="setInterval('notif_msj()',10000)"> <span class="badge">{{ count($notificacionesnleidas)  }}</span></a>  |  Leidos  <a href="{{ route('visualcon') }}"><span class="badge">{{ count($notifleid)  }}</span>       </a>  </h3>
+<h3>&nbsp&nbsp <i class="glyphicon glyphicon-inbox"> </i> <a href="{{ route('baul') }}"> Archivados  </a>     <a href="{{ route('baul')}}"><span class="badge">{{ count($notifborradas)  }}</span></a>  </h3> 
+</div>
 
 
 
-
-
-<div class="container" style="width:100%">
-      <div class="row">
-          <div class="col-md-8 col-md-offset-2">
-              <div class="panel panel-default ">
-  <div class="panel-body">
-
-  <br>
-        <div class="col-sm-6">
-          
-
-<<<<<<< HEAD
-<hr>
-
-<h3 style="text-align:center;">Novedades al {{date('d-m-Y')}}</h3>
+<h3>Novedades</h3>
 
 @if(count($novedades)==0)
-  <ul class="list alert alert-warning">
-  <p><strong>* No hay nuevas novedades.</strong></p>
-  </ul>
+<p>*No hay nuevas novedades.</p>
 @else
 
-<ul class="list alert alert-info" >
+<ul class="list alert alert-info">
   
-=======
-  <h1><i sp class="fa fa-address-card" ></i>Juan Perez</h1> 
-
-  <h3>Cuit 20-37462532-3</h3>
-  </div>
-
-  <div class="media-body">
-    
 
 
-  <h3>&nbsp&nbsp <i class="glyphicon glyphicon-bell"> </i> <a href="{{ route('visualcon') }}"> Avisos </a>  </h3>
-  <h3>&nbsp&nbsp  Sin leer <a href="{{ route('visualcon') }}" onclick="setInterval('notif_msj()',10000)"> <span class="badge">{{ count($notificacionesnleidas)  }}</span></a>  |  Leidos  <a href="{{ route('visualcon') }}"><span class="badge">{{ count($notifleid)  }}</span>       </a>  </h3>
-  <h3>&nbsp&nbsp <i class="glyphicon glyphicon-inbox"> </i> <a href="{{ route('baul') }}"> Archivados  </a>     <a href="{{ route('baul')}}"><span class="badge">{{ count($notifborradas)  }}</span></a>  </h3> 
-  </div>
->>>>>>> origin/master
-
-<hr>
-
-  <h3>Novedades</h3>
-
-  @if(count($novedades)==0)
-  <p>*No hay nuevas novedades.</p>
-  @else
-
-  <ul class="list alert alert-info">
-    
 
 
-<<<<<<< HEAD
+
+      @foreach($novedades as $nov)
+  
+
      
-    *  <strong>{{ $nov->texto }}<br></strong>   
+    *<strong>{{ $nov->texto }}<br></strong>   
      
-=======
-
-
-
-        @foreach($novedades as $nov)
->>>>>>> origin/master
     
+        
+     @endforeach
 
-       
-      *<strong>{{ $nov->texto }}<br></strong>   
-       
-      
-          
-       @endforeach
-
-  </ul>
+</ul>
 
 
-  @endif
+@endif
+
+</div>
+
+
+
+
+      </div>
+
+    </div>
 
   </div>
-
-
-
-
-  			</div>
-
-  		</div>
-
-	</div>
 
 </div>
 
@@ -136,9 +94,9 @@
             <div class="panel panel-default">
 
 <br>
-	<h3>&nbsp&nbsp{{$nombre}}</h3>
+  <h3>&nbsp&nbsp{{$nombre}}</h3>
 <br>
-	
+  
 
  @if(count($notificaciones)==0)
 
@@ -149,12 +107,12 @@
 
 @else 
  
-	<table onload="setInterval('location.reload()',15000)" class="table">
+  <table onload="setInterval('location.reload()',15000)" class="table">
     <thead>
       <tr>
         <th></th>
         <th><i &nbsp class="glyphicon glyphicon-paperclip" ></i></th>
-      	<th>Fecha</th>
+        <th>Fecha</th>
         <th>Tema</th>
         <th>Despacho</th>
         
@@ -292,18 +250,14 @@ return  '';
     </tbody>
   </table>
 
-			</div>
+      </div>
 
-		</div>
+    </div>
 
-	</div>
+  </div>
 
 </div>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> parent of 913d243... cambiosss_agregand
 
 
 
@@ -358,12 +312,6 @@ function CrearEnlace(url) {
 
 </script>
 
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
@@ -375,71 +323,8 @@ s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
-<!--End of Tawk.to Script-->
-=======
-@extends('layouts.encabezado')
-
-<footer>
 
 
-  <div class="container" style="width:100%">
-          <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default ">
-
-              <div class="panel-body">
-
-
-           
-             
-
-                    <div class="row">
-
-                          <div class="col-md-6 text-right">
-=======
->>>>>>> parent of 913d243... cambiosss_agregand
-
-                            <p style="text-align: left;" class="text-muted small m-t-1">
-                                
-                                <img src="../resources/img/logo.png" width="20px">
-
-                            </p>
-
-                          </div>
-                    </div>
->>>>>>> origin/master
-=======
->>>>>>> parent of 913d243... cambiosss_agregand
-
-
-                     <div class="row">
-                              <div class="col-md-12 text-right">
-
-                          <p style="text-align: center;" class="text-muted small m-t-1">
-
-                                  
-                                  
-                                  
-                                  <strong >Dirección General de Rentas</strong><br>
-                                  Sitio perteneciente a: 
-                                  Secretaría de Hacienda y Desarrollo Económico<br>
-                                  Municipalidad de San Fernando del Valle de Catamarca
-
-                          </p>
-
-                              </div>
-
-
-                       </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-</div>
-
-
-</footer>
 </body>
 
 @endif
@@ -462,5 +347,3 @@ s0.parentNode.insertBefore(s1,s0);
 
 
 @endsection
-
-
