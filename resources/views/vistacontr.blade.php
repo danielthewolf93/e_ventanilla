@@ -19,7 +19,11 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <div class="container" style="width:100%">
+=======
+<div class="container">
+>>>>>>> parent of 913d243... cambiosss_agregand
 =======
 <div class="container">
 >>>>>>> parent of 913d243... cambiosss_agregand
@@ -296,7 +300,10 @@ return  '';
 
 </div>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 913d243... cambiosss_agregand
 
 
 
@@ -355,6 +362,7 @@ function CrearEnlace(url) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -388,6 +396,8 @@ s0.parentNode.insertBefore(s1,s0);
                     <div class="row">
 
                           <div class="col-md-6 text-right">
+=======
+>>>>>>> parent of 913d243... cambiosss_agregand
 
                             <p style="text-align: left;" class="text-muted small m-t-1">
                                 
