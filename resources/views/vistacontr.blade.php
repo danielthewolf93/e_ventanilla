@@ -17,30 +17,30 @@
 
 <body onload="setInterval('notif_msj()',10000)">
 
+<<<<<<< HEAD
 <div class="container" style="width:100%">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default ">
 <div class="panel-body">
-
-<br>
-      <div class="col-sm-6">
-        
-
-<h1><i sp class="fa fa-address-card" ></i>Juan Perez</h1> 
-
-<h3>Cuit 20-37462532-3</h3>
-</div>
-
-<div class="media-body">
-  
+=======
+>>>>>>> origin/master
 
 
-<h3>&nbsp&nbsp <i class="glyphicon glyphicon-bell"> </i> <a href="{{ route('visualcon') }}"> Avisos </a>  </h3>
-<h3>&nbsp&nbsp  Sin leer <a href="{{ route('visualcon') }}" onclick="setInterval('notif_msj()',10000)"> <span class="badge">{{ count($notificacionesnleidas)  }}</span></a>  |  Leidos  <a href="{{ route('visualcon') }}"><span class="badge">{{ count($notifleid)  }}</span>       </a>  </h3>
-<h3>&nbsp&nbsp <i class="glyphicon glyphicon-inbox"> </i> <a href="{{ route('baul') }}"> Archivados  </a>     <a href="{{ route('baul')}}"><span class="badge">{{ count($notifborradas)  }}</span></a>  </h3> 
-</div>
 
+
+
+<div class="container" style="width:100%">
+      <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+              <div class="panel panel-default ">
+  <div class="panel-body">
+
+  <br>
+        <div class="col-sm-6">
+          
+
+<<<<<<< HEAD
 <hr>
 
 <h3 style="text-align:center;">Novedades al {{date('d-m-Y')}}</h3>
@@ -53,34 +53,66 @@
 
 <ul class="list alert alert-info" >
   
+=======
+  <h1><i sp class="fa fa-address-card" ></i>Juan Perez</h1> 
+
+  <h3>Cuit 20-37462532-3</h3>
+  </div>
+
+  <div class="media-body">
+    
 
 
+  <h3>&nbsp&nbsp <i class="glyphicon glyphicon-bell"> </i> <a href="{{ route('visualcon') }}"> Avisos </a>  </h3>
+  <h3>&nbsp&nbsp  Sin leer <a href="{{ route('visualcon') }}" onclick="setInterval('notif_msj()',10000)"> <span class="badge">{{ count($notificacionesnleidas)  }}</span></a>  |  Leidos  <a href="{{ route('visualcon') }}"><span class="badge">{{ count($notifleid)  }}</span>       </a>  </h3>
+  <h3>&nbsp&nbsp <i class="glyphicon glyphicon-inbox"> </i> <a href="{{ route('baul') }}"> Archivados  </a>     <a href="{{ route('baul')}}"><span class="badge">{{ count($notifborradas)  }}</span></a>  </h3> 
+  </div>
+>>>>>>> origin/master
+
+<hr>
+
+  <h3>Novedades</h3>
+
+  @if(count($novedades)==0)
+  <p>*No hay nuevas novedades.</p>
+  @else
+
+  <ul class="list alert alert-info">
+    
 
 
-
-      @foreach($novedades as $nov)
-  
-
+<<<<<<< HEAD
      
     *  <strong>{{ $nov->texto }}<br></strong>   
      
+=======
+
+
+
+        @foreach($novedades as $nov)
+>>>>>>> origin/master
     
-        
-     @endforeach
 
-</ul>
+       
+      *<strong>{{ $nov->texto }}<br></strong>   
+       
+      
+          
+       @endforeach
 
-
-@endif
-
-</div>
-
-
+  </ul>
 
 
-			</div>
+  @endif
 
-		</div>
+  </div>
+
+
+
+
+  			</div>
+
+  		</div>
 
 	</div>
 
@@ -280,6 +312,7 @@ return  '';
   </style>
 
 
+
 <script  type="text/javascript">
 
 // RESALTAR LAS FILAS AL PASAR EL MOUSE
@@ -353,6 +386,7 @@ $(document).ready(function(){
 </script>
 
 
+<<<<<<< HEAD
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -366,6 +400,7 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
+=======
 
 </body>
 
@@ -389,3 +424,5 @@ s0.parentNode.insertBefore(s1,s0);
 
 
 @endsection
+
+
