@@ -18,7 +18,11 @@
 <body onload="setInterval('notif_msj()',10000)">
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <div class="container" style="width:100%">
+=======
+<div class="container">
+>>>>>>> parent of 913d243... cambiosss_agregand
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default ">
@@ -122,7 +126,7 @@
 
 
 
-<div class="container" style="width:100%">
+<div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
@@ -141,7 +145,7 @@
 
 @else 
  
-	<table onload="setInterval('location.reload()',15000)" class="table" style="width:100%">
+	<table onload="setInterval('location.reload()',15000)" class="table">
     <thead>
       <tr>
         <th></th>
@@ -289,27 +293,10 @@ return  '';
 		</div>
 
 	</div>
-  
 
 </div>
 
-<span class="ir-arriba fa fa-angle-up"></span>
-  <style type="text/css">
-    
-  .ir-arriba {
-    display:none;
-    padding:20px;
-    background:#024959;
-    font-size:20px;
-    color:#fff;
-    cursor:pointer;
-    position: fixed;
-    bottom:20px;
-    right:20px;
 
-  }
-
-  </style>
 
 
 
@@ -362,30 +349,11 @@ function CrearEnlace(url) {
   }
 
 
-
-</script>
-
-<script type="text/javascript">
-$(document).ready(function(){
- 
-  $('.ir-arriba').click(function(){
-    $('body, html').animate({
-      scrollTop: '0px'
-    }, 300);
-  });
- 
-  $(window).scroll(function(){
-    if( $(this).scrollTop() > 0 ){
-      $('.ir-arriba').slideDown(300);
-    } else {
-      $('.ir-arriba').slideUp(300);
-    }
-  });
- 
-});
 </script>
 
 
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
@@ -430,6 +398,8 @@ s0.parentNode.insertBefore(s1,s0);
                           </div>
                     </div>
 >>>>>>> origin/master
+=======
+>>>>>>> parent of 913d243... cambiosss_agregand
 
 
                      <div class="row">
