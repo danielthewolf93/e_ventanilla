@@ -401,7 +401,65 @@ s0.parentNode.insertBefore(s1,s0);
 </script>
 <!--End of Tawk.to Script-->
 =======
+@extends('layouts.encabezado')
 
+<footer>
+
+
+  <div class="container" style="width:100%">
+          <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default ">
+
+              <div class="panel-body">
+
+
+           
+             
+
+                    <div class="row">
+
+                          <div class="col-md-6 text-right">
+
+                            <p style="text-align: left;" class="text-muted small m-t-1">
+                                
+                                <img src="../resources/img/logo.png" width="20px">
+
+                            </p>
+
+                          </div>
+                    </div>
+>>>>>>> origin/master
+
+
+                     <div class="row">
+                              <div class="col-md-12 text-right">
+
+                          <p style="text-align: center;" class="text-muted small m-t-1">
+
+                                  
+                                  
+                                  
+                                  <strong >Dirección General de Rentas</strong><br>
+                                  Sitio perteneciente a: 
+                                  Secretaría de Hacienda y Desarrollo Económico<br>
+                                  Municipalidad de San Fernando del Valle de Catamarca
+
+                          </p>
+
+                              </div>
+
+
+                       </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+</div>
+
+
+</footer>
 </body>
 
 @endif
